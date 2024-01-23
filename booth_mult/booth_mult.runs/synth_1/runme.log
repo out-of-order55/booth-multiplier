@@ -1,0 +1,507 @@
+
+*** Running vivado
+    with args -log pp_generator.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source pp_generator.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source pp_generator.tcl -notrace
+Command: synth_design -top pp_generator -part xc7a35tftg256-2L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 17000 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 700.156 ; gain = 236.168
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'pp_generator' [E:/RISCV/booth/pp_generator.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pp_generator' (1#1) [E:/RISCV/booth/pp_generator.v:1]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[15]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[14]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[13]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[12]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[11]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[10]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[9]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[8]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[7]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[6]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[5]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[4]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[3]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[15]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[14]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[13]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[12]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[11]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[10]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[9]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[8]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[7]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[6]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[5]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[4]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[3]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[15]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[14]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[13]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[12]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[11]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[10]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[9]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[8]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[7]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[6]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[5]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[4]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 772.676 ; gain = 308.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 772.676 ; gain = 308.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tftg256-2L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 772.676 ; gain = 308.688
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tftg256-2L
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 772.676 ; gain = 308.688
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 16    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pp_generator 
+Detailed RTL Component Info : 
++---Registers : 
+	               64 Bit    Registers := 16    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[15]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[14]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[13]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[12]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[11]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[10]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[9]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[8]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[7]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[6]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[5]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[4]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port set0[3]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[15]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[14]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[13]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[12]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[11]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[10]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[9]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[8]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[7]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[6]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[5]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[4]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port inv[3]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[15]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[14]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[13]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[12]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[11]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[10]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[9]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[8]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[7]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[6]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[5]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[4]
+WARNING: [Synth 8-3331] design pp_generator has unconnected port X2[3]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp15_reg[59] )
+INFO: [Synth 8-3886] merging instance 'pp15_reg[60]' (FDC) to 'pp14_reg[56]'
+INFO: [Synth 8-3886] merging instance 'pp15_reg[61]' (FDC) to 'pp14_reg[57]'
+INFO: [Synth 8-3886] merging instance 'pp15_reg[62]' (FDC) to 'pp14_reg[58]'
+INFO: [Synth 8-3886] merging instance 'pp15_reg[63]' (FDC) to 'pp14_reg[59]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pp14_reg[39] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'pp14_reg[56]' (FDC) to 'pp13_reg[52]'
+INFO: [Synth 8-3886] merging instance 'pp14_reg[57]' (FDC) to 'pp13_reg[53]'
+INFO: [Synth 8-3886] merging instance 'pp14_reg[58]' (FDC) to 'pp13_reg[54]'
+INFO: [Synth 8-3886] merging instance 'pp14_reg[59]' (FDC) to 'pp13_reg[55]'
+INFO: [Synth 8-3886] merging instance 'pp14_reg[60]' (FDC) to 'pp13_reg[56]'
+INFO: [Synth 8-3886] merging instance 'pp14_reg[61]' (FDC) to 'pp13_reg[57]'
+INFO: [Synth 8-3886] merging instance 'pp14_reg[62]' (FDC) to 'pp13_reg[58]'
+INFO: [Synth 8-3886] merging instance 'pp14_reg[63]' (FDC) to 'pp13_reg[59]'
+INFO: [Synth 8-3886] merging instance 'pp13_reg[52]' (FDC) to 'pp12_reg[48]'
+INFO: [Synth 8-3886] merging instance 'pp13_reg[53]' (FDC) to 'pp12_reg[49]'
+INFO: [Synth 8-3886] merging instance 'pp13_reg[54]' (FDC) to 'pp12_reg[50]'
+INFO: [Synth 8-3886] merging instance 'pp13_reg[55]' (FDC) to 'pp12_reg[51]'
+INFO: [Synth 8-3886] merging instance 'pp13_reg[56]' (FDC) to 'pp12_reg[52]'
+INFO: [Synth 8-3886] merging instance 'pp13_reg[57]' (FDC) to 'pp12_reg[53]'
+INFO: [Synth 8-3886] merging instance 'pp13_reg[58]' (FDC) to 'pp12_reg[54]'
+INFO: [Synth 8-3886] merging instance 'pp13_reg[59]' (FDC) to 'pp12_reg[55]'
+INFO: [Synth 8-3886] merging instance 'pp13_reg[60]' (FDC) to 'pp12_reg[56]'
+INFO: [Synth 8-3886] merging instance 'pp13_reg[61]' (FDC) to 'pp12_reg[57]'
+INFO: [Synth 8-3886] merging instance 'pp13_reg[62]' (FDC) to 'pp12_reg[58]'
+INFO: [Synth 8-3886] merging instance 'pp13_reg[63]' (FDC) to 'pp12_reg[59]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[48]' (FDC) to 'pp11_reg[44]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[49]' (FDC) to 'pp11_reg[45]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[50]' (FDC) to 'pp11_reg[46]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[51]' (FDC) to 'pp11_reg[47]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[52]' (FDC) to 'pp11_reg[48]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[53]' (FDC) to 'pp11_reg[49]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[54]' (FDC) to 'pp11_reg[50]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[55]' (FDC) to 'pp11_reg[51]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[56]' (FDC) to 'pp11_reg[52]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[57]' (FDC) to 'pp11_reg[53]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[58]' (FDC) to 'pp11_reg[54]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[59]' (FDC) to 'pp11_reg[55]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[60]' (FDC) to 'pp11_reg[56]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[61]' (FDC) to 'pp11_reg[57]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[62]' (FDC) to 'pp11_reg[58]'
+INFO: [Synth 8-3886] merging instance 'pp12_reg[63]' (FDC) to 'pp11_reg[59]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[44]' (FDC) to 'pp10_reg[40]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[45]' (FDC) to 'pp10_reg[41]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[46]' (FDC) to 'pp10_reg[42]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[47]' (FDC) to 'pp10_reg[43]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[48]' (FDC) to 'pp10_reg[44]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[49]' (FDC) to 'pp10_reg[45]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[50]' (FDC) to 'pp10_reg[46]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[51]' (FDC) to 'pp10_reg[47]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[52]' (FDC) to 'pp10_reg[48]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[53]' (FDC) to 'pp10_reg[49]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[54]' (FDC) to 'pp10_reg[50]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[55]' (FDC) to 'pp10_reg[51]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[56]' (FDC) to 'pp10_reg[52]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[57]' (FDC) to 'pp10_reg[53]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[58]' (FDC) to 'pp10_reg[54]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[59]' (FDC) to 'pp10_reg[55]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[60]' (FDC) to 'pp10_reg[56]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[61]' (FDC) to 'pp10_reg[57]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[62]' (FDC) to 'pp10_reg[58]'
+INFO: [Synth 8-3886] merging instance 'pp11_reg[63]' (FDC) to 'pp10_reg[59]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[40]' (FDC) to 'pp9_reg[36]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[41]' (FDC) to 'pp9_reg[37]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[42]' (FDC) to 'pp9_reg[38]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[43]' (FDC) to 'pp9_reg[39]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[44]' (FDC) to 'pp9_reg[40]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[45]' (FDC) to 'pp9_reg[41]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[46]' (FDC) to 'pp9_reg[42]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[47]' (FDC) to 'pp9_reg[43]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[48]' (FDC) to 'pp9_reg[44]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[49]' (FDC) to 'pp9_reg[45]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[50]' (FDC) to 'pp9_reg[46]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[51]' (FDC) to 'pp9_reg[47]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[52]' (FDC) to 'pp9_reg[48]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[53]' (FDC) to 'pp9_reg[49]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[54]' (FDC) to 'pp9_reg[50]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[55]' (FDC) to 'pp9_reg[51]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[56]' (FDC) to 'pp9_reg[52]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[57]' (FDC) to 'pp9_reg[53]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[58]' (FDC) to 'pp9_reg[54]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[59]' (FDC) to 'pp9_reg[55]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[60]' (FDC) to 'pp9_reg[56]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[61]' (FDC) to 'pp9_reg[57]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[62]' (FDC) to 'pp9_reg[58]'
+INFO: [Synth 8-3886] merging instance 'pp10_reg[63]' (FDC) to 'pp9_reg[59]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[36]' (FDC) to 'pp8_reg[32]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[37]' (FDC) to 'pp8_reg[33]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[38]' (FDC) to 'pp8_reg[34]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[39]' (FDC) to 'pp8_reg[35]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[40]' (FDC) to 'pp8_reg[36]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[41]' (FDC) to 'pp8_reg[37]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[42]' (FDC) to 'pp8_reg[38]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[43]' (FDC) to 'pp8_reg[39]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[44]' (FDC) to 'pp8_reg[40]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[45]' (FDC) to 'pp8_reg[41]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[46]' (FDC) to 'pp8_reg[42]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[47]' (FDC) to 'pp8_reg[43]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[48]' (FDC) to 'pp8_reg[44]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[49]' (FDC) to 'pp8_reg[45]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[50]' (FDC) to 'pp8_reg[46]'
+INFO: [Synth 8-3886] merging instance 'pp9_reg[51]' (FDC) to 'pp8_reg[47]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 925.910 ; gain = 461.922
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 932.715 ; gain = 468.727
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 932.715 ; gain = 468.727
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 932.715 ; gain = 468.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 932.715 ; gain = 468.727
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 932.715 ; gain = 468.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 932.715 ; gain = 468.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 932.715 ; gain = 468.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 932.715 ; gain = 468.727
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     1|
+|3     |FDCE |     1|
+|4     |IBUF |     2|
+|5     |OBUF |  1024|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  1029|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 932.715 ; gain = 468.727
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 78 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 932.715 ; gain = 468.727
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 932.715 ; gain = 468.727
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 944.848 ; gain = 0.000
+WARNING: [Netlist 29-101] Netlist 'pp_generator' is not ideal for floorplanning, since the cellview 'pp_generator' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1040.301 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+211 Infos, 79 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1040.301 ; gain = 601.141
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1040.301 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'E:/RISCV/booth/booth_mult/booth_mult.runs/synth_1/pp_generator.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file pp_generator_utilization_synth.rpt -pb pp_generator_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 22 21:36:55 2024...

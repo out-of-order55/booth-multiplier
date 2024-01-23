@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Mon Jan 22 21:36:31 2024
+# Process ID: 20464
+# Current directory: E:/RISCV/booth/booth_mult/booth_mult.runs/synth_1
+# Command line: vivado.exe -log pp_generator.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pp_generator.tcl
+# Log file: E:/RISCV/booth/booth_mult/booth_mult.runs/synth_1/pp_generator.vds
+# Journal file: E:/RISCV/booth/booth_mult/booth_mult.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source pp_generator.tcl -notrace

@@ -1,0 +1,16 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/CLA.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CLA
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/CLA_64bits.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CLA_64bits
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/booth_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module booth_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/booth_multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module booth_multiplier
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/compressor4_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module compressor4_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/pp_compressor4_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pp_compressor4_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/pp_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pp_generator
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/tb/tb_booth_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_booth_ctrl
