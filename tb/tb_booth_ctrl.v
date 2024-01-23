@@ -5,6 +5,7 @@ module tb_booth_ctrl();
 	reg[31:0]	A_r,B_r;
 	reg[31:0]	A_r1,B_r1;
 	reg[31:0]	A_r2,B_r2;
+	reg[31:0]	A_r3,B_r3;
 	reg valid_i,ready_i;
 	reg		sys_clk,sys_rst_n;
 
@@ -35,7 +36,9 @@ module tb_booth_ctrl();
 			A_r1<= 'b0;
 			B_r1<= 'b0;
 			A_r2<= 'b0;
-			B_r2<= 'b0;		
+			B_r2<= 'b0;
+			A_r3<= 'b0;
+			B_r3<= 'b0;				
 		end
 		else	begin
 			A_r <= A;
@@ -43,22 +46,24 @@ module tb_booth_ctrl();
 			A_r1<= A_r;
 			B_r1<= B_r;
 			A_r2<= A_r1;
-			B_r2<= B_r1;	
+			B_r2<= B_r1;
+			A_r3<= A_r2;
+			B_r3<= B_r2;				
 		end
 	end
 	
-	wire	signed[63:0]  res_ref = $signed(A_r2)*$signed(B_r2);
+	wire	signed[63:0]  res_ref = $signed(A_r3)*$signed(B_r3);
 	reg	[20:0]	num_correct=0;
 	reg	[20:0]	num_error=0;
 	reg	[20:0]	i=0;
 	always@(posedge sys_clk)begin
 		i<=i+1'b1;
 		if(i==TEST_NUM)begin
-			$display("Accuracy:%d / %d = %d%%",num_correct-3,i-4,(num_correct-3)*100/(i-4));
+			$display("Accuracy:%d / %d = %d%%",num_correct-4,i-5,(num_correct-4)*100/(i-5));
 			$finish;
 		end
 		else begin
-			$write("[%d]:%d * %d = %d ,ref: %d ",i-3,$signed(A_r),$signed(B_r),$signed(res),res_ref);
+			$write("[%d]:%d * %d = %d ,ref: %d ",i-4,$signed(A_r),$signed(B_r),$signed(res),res_ref);
 			if(res_ref==res)begin
 				$display("PASS");
 				num_correct<=num_correct+1'b1;

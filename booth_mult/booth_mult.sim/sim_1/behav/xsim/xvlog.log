@@ -13,5 +13,5 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/src/pp_compressor4_2
 INFO: [VRFC 10-311] analyzing module pp_compressor4_2
 INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/src/pp_generator.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pp_generator
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/tb/tb_bus.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_bus
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/tb/tb_booth_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_booth_ctrl

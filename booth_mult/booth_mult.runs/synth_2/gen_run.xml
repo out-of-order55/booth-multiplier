@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_2" LaunchPart="xc7a200tffg1156-3" LaunchTime="1705994179">
   <File Type="PA-TCL" Name="booth_multiplier.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="booth_multiplier_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="booth_multiplier_reports.tcl"/>
   <File Type="RDS-RDS" Name="booth_multiplier.vds"/>
   <File Type="RDS-UTIL" Name="booth_multiplier_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="booth_multiplier_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="booth_multiplier.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="booth_multiplier_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="booth_multiplier_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../src/CLA.v">

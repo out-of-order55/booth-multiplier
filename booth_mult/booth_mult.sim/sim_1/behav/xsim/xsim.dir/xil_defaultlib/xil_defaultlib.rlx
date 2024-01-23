@@ -9,6 +9,6 @@ E:/RISCV/booth/src/booth_ctrl.v,1705935370,verilog,,E:/RISCV/booth/src/booth_mul
 E:/RISCV/booth/src/booth_multiplier.v,1705995479,verilog,,E:/RISCV/booth/src/compressor4_2.v,,booth_multiplier,,,,,,,,
 E:/RISCV/booth/src/compressor4_2.v,1705941919,verilog,,E:/RISCV/booth/src/pp_compressor4_2.v,,compressor4_2,,,,,,,,
 E:/RISCV/booth/src/pp_compressor4_2.v,1705992535,verilog,,E:/RISCV/booth/src/pp_generator.v,,pp_compressor4_2,,,,,,,,
-E:/RISCV/booth/src/pp_generator.v,1705994886,verilog,,E:/RISCV/booth/tb/tb_bus.v,,pp_generator,,,,,,,,
-E:/RISCV/booth/tb/tb_booth_ctrl.v,1705994636,verilog,,,,tb_booth_ctrl,,,,,,,,
+E:/RISCV/booth/src/pp_generator.v,1705994886,verilog,,E:/RISCV/booth/tb/tb_booth_ctrl.v,,pp_generator,,,,,,,,
+E:/RISCV/booth/tb/tb_booth_ctrl.v,1706020575,verilog,,,,tb_booth_ctrl,,,,,,,,
 E:/RISCV/booth/tb/tb_bus.v,1705997864,verilog,,,,tb_bus,,,,,,,,

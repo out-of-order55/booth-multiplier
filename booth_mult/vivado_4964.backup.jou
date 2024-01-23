@@ -1,0 +1,202 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Jan 23 09:23:15 2024
+# Process ID: 4964
+# Current directory: E:/RISCV/booth/booth_mult
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19748 E:\RISCV\booth\booth_mult\booth_mult.xpr
+# Log file: E:/RISCV/booth/booth_mult/vivado.log
+# Journal file: E:/RISCV/booth/booth_mult\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/RISCV/booth/booth_mult/booth_mult.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse E:/RISCV/booth/CLA.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top CLA [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+reset_run synth_2
+update_compile_order -fileset sources_1
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+synth_design -rtl -name rtl_1
+add_files -norecurse E:/RISCV/booth/CLA_64bits.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top CLA_64bits [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+refresh_design
+refresh_design
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top booth_multiplier [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+refresh_design
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+refresh_design
+open_run synth_2 -name synth_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_simulation
+source tb_booth_ctrl.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top pp_compressor4_2 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top booth_multiplier [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source tb_booth_ctrl.tcl
+update_compile_order -fileset sources_1
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tb_booth_ctrl/u_booth_multiplier/CLA_64bits_s4}} 
+restart
+run 1 us
+current_wave_config {Untitled 2}
+add_wave {{/tb_booth_ctrl/u_booth_multiplier/CLA_64bits_s4/\CLA_inst[0].genblk1.CLA_0 }} 
+relaunch_sim
+restart
+run 1 us
+relaunch_sim
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 2}
+add_wave {{/tb_booth_ctrl/res_ref}} 
+run 1 us
+restart
+run all
+relaunch_sim
+run all
+restart
+close_sim
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+launch_simulation
+source tb_booth_ctrl.tcl
+relaunch_sim
+run all
+restart
+run all
+relaunch_sim
+relaunch_sim
+run all
+relaunch_sim
+run all
+close_sim
+refresh_design
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+close_design
+open_run impl_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+open_run synth_2 -name synth_2
+report_clock_networks -name {network_1}
+report_clock_interaction -delay_type min_max -significant_digits 3 -name timing_1
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -cells [get_cells clk_IBUF_inst] -name timing_2
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -cells [get_cells clk_IBUF_inst] -name timing_3
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+close_design
+open_run synth_2 -name synth_2
+check_timing -verbose -name timing_1
+launch_runs impl_2 -jobs 4
+wait_on_run impl_2
+current_design impl_2
+refresh_design
+create_clock -period 10.000 -name clk -waveform {0.000 5.000} [get_ports -filter { NAME =~  "*clk*" && DIRECTION == "IN" }]
+report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -name timing_1
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+add_files -norecurse {E:/RISCV/booth/src/booth_ctrl.v E:/RISCV/booth/src/CLA.v E:/RISCV/booth/src/booth_multiplier.v E:/RISCV/booth/src/pp_generator.v E:/RISCV/booth/src/compressor4_2.v E:/RISCV/booth/src/pp_compressor4_2.v E:/RISCV/booth/src/CLA_64bits.v}
+update_compile_order -fileset sources_1
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+close_design
+refresh_design
+export_ip_user_files -of_objects  [get_files E:/RISCV/booth/CLA.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files E:/RISCV/booth/CLA_64bits.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files E:/RISCV/booth/booth_ctrl.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files E:/RISCV/booth/booth_multiplier.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files E:/RISCV/booth/compressor4_2.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files E:/RISCV/booth/pp_compressor4_2.v] -no_script -reset -force -quiet
+export_ip_user_files -of_objects  [get_files E:/RISCV/booth/pp_generator.v] -no_script -reset -force -quiet
+remove_files  {E:/RISCV/booth/CLA.v E:/RISCV/booth/CLA_64bits.v E:/RISCV/booth/booth_ctrl.v E:/RISCV/booth/booth_multiplier.v E:/RISCV/booth/compressor4_2.v E:/RISCV/booth/pp_compressor4_2.v E:/RISCV/booth/pp_generator.v}
+current_design rtl_1
+refresh_design
+reset_run synth_2
+launch_runs synth_2 -jobs 4
+wait_on_run synth_2
+refresh_design
+launch_simulation
+source tb_booth_ctrl.tcl
+current_wave_config {Untitled 4}
+add_wave {{/tb_booth_ctrl/u_booth_multiplier}} 
+restart
+run 1 us
+relaunch_sim
+run all
+close_sim
+export_ip_user_files -of_objects  [get_files E:/RISCV/booth/tb/tb_booth_ctrl.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 E:/RISCV/booth/tb/tb_booth_ctrl.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse E:/RISCV/booth/tb/tb_bus.v
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+source tb_bus.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+restart
+run 1 us
+relaunch_sim
+current_wave_config {Untitled 5}
+add_wave {{/tb_bus}} 
+current_wave_config {Untitled 5}
+add_wave {{/tb_bus}} 
+relaunch_sim
+close_sim
