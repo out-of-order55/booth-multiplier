@@ -34,13 +34,13 @@ set rt::rc [catch {
     set rt::useElabCache false
     if {$rt::useElabCache == false} {
       rt::read_verilog {
-      E:/RISCV/booth/CLA.v
-      E:/RISCV/booth/CLA_64bits.v
-      E:/RISCV/booth/booth_ctrl.v
-      E:/RISCV/booth/compressor4_2.v
-      E:/RISCV/booth/pp_compressor4_2.v
-      E:/RISCV/booth/pp_generator.v
-      E:/RISCV/booth/booth_multiplier.v
+      E:/RISCV/booth/src/CLA.v
+      E:/RISCV/booth/src/CLA_64bits.v
+      E:/RISCV/booth/src/booth_ctrl.v
+      E:/RISCV/booth/src/compressor4_2.v
+      E:/RISCV/booth/src/pp_compressor4_2.v
+      E:/RISCV/booth/src/pp_generator.v
+      E:/RISCV/booth/src/booth_multiplier.v
     }
       rt::filesetChecksum
     }

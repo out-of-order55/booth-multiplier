@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Jan 23 14:18:58 2024
-# Process ID: 7600
+# Start of session at: Tue Jan 23 15:16:22 2024
+# Process ID: 19328
 # Current directory: E:/RISCV/booth/booth_mult/booth_mult.runs/synth_2
 # Command line: vivado.exe -log booth_multiplier.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source booth_multiplier.tcl
 # Log file: E:/RISCV/booth/booth_mult/booth_mult.runs/synth_2/booth_multiplier.vds

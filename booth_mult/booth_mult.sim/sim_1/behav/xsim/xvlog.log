@@ -1,16 +1,17 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/CLA.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/src/CLA.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CLA
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/CLA_64bits.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/src/CLA_64bits.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module CLA_64bits
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/booth_ctrl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/src/booth_ctrl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module booth_ctrl
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/booth_multiplier.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/src/booth_multiplier.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module booth_multiplier
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/compressor4_2.v" into library xil_defaultlib
+INFO: [VRFC 10-2458] undeclared symbol ready_r3, assumed default net type wire [E:/RISCV/booth/src/booth_multiplier.v:207]
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/src/compressor4_2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module compressor4_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/pp_compressor4_2.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/src/pp_compressor4_2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pp_compressor4_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/pp_generator.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/src/pp_generator.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pp_generator
-INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/tb/tb_booth_ctrl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tb_booth_ctrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/tb/tb_bus.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_bus

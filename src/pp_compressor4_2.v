@@ -3,9 +3,12 @@ module	pp_compressor4_2(
 	input[63:0]		i2	,
 	input[63:0]		i3	,
 	input[63:0]		i4	,
+
 	output[63:0]	C	,
 	output[63:0]	S	
 );
+
+
 	wire[63:0]	C_comb;
 	wire[63:0]	S_comb;
 	wire[63:0]	c_temp;

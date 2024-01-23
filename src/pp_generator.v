@@ -5,7 +5,12 @@ module pp_generator(
 	input [15:0]       set0	,	
 	input [15:0]       inv	,	
 	input [15:0]       X2	,
-	
+	input			valid_i,
+	output			ready_o,
+	//下一级
+	input			ready_i,
+	output			valid_o,
+
 	output reg[63:0]       pp0	,
 	output reg[63:0]       pp1	,
 	output reg[63:0]       pp2	,
@@ -23,6 +28,19 @@ module pp_generator(
 	output reg[63:0]       pp14	,
 	output reg[63:0]       pp15	
 );
+
+	assign		ready_o = ready_i;
+	
+	reg			valid_r;
+	always @(posedge clk or negedge rst_n) begin
+		if(!rst_n)begin
+			valid_r<=1'b0;
+		end
+		else if(ready_o)begin
+			valid_r<=valid_i;
+		end
+	end
+
 	wire[63:0]  pp_temp[15:0];
 	wire[32:0]  data;
 	assign	data = {data_i[31],data_i};
@@ -42,23 +60,7 @@ module pp_generator(
 		if(!rst_n)begin
 			{pp0,pp1,pp2,pp3,pp4,pp5,pp6,pp7,pp8,pp9,pp10,pp11,pp12,pp13,pp14,pp15} <= 'b0;
 		end
-		else begin
-			// pp0	 <= pp_temp[0];
-			// pp1	 <= {pp_temp[1]<<2,2'b0};
-			// pp2	 <= {pp_temp[2]<<4,4'b0};
-			// pp3	 <= {pp_temp[3]<<6,6'b0};
-			// pp4	 <= {pp_temp[4]<<8,8'b0};
-			// pp5	 <= {pp_temp[5]<<10,10'b0};
-			// pp6	 <= {pp_temp[6]<<12,12'b0};
-			// pp7	 <= {pp_temp[7]<<14,14'b0};
-			// pp8	 <= {pp_temp[8]<<16,16'b0};
-			// pp9	 <= {pp_temp[9]<<18,18'b0};
-			// pp10 <= {pp_temp[10]<<20,20'b0};	
-			// pp11 <= {pp_temp[11]<<22,22'b0};	
-			// pp12 <= {pp_temp[12]<<24,24'b0};	
-			// pp13 <= {pp_temp[13]<<26,26'b0};	
-			// pp14 <= {pp_temp[14]<<28,28'b0};	
-			// pp15 <= {pp_temp[15]<<30,30'b0};
+		else if(ready_o&valid_i)begin
 			pp0	 <= pp_temp[0];
 			pp1	 <= {pp_temp[1]<<2};
 			pp2	 <= {pp_temp[2]<<4};
@@ -77,4 +79,5 @@ module pp_generator(
 			pp15 <= {pp_temp[15]<<30};			
 		end
 	end
+	assign		valid_o	= valid_r;
 endmodule

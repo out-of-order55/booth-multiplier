@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../src/CLA.v" \
+"../../../../../src/CLA_64bits.v" \
+"../../../../../src/booth_ctrl.v" \
+"../../../../../src/booth_multiplier.v" \
+"../../../../../src/compressor4_2.v" \
+"../../../../../src/pp_compressor4_2.v" \
+"../../../../../src/pp_generator.v" \
+"../../../../../tb/tb_bus.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

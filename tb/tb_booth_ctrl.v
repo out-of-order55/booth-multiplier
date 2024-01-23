@@ -1,17 +1,24 @@
+//测试功能完整性
 `timescale 1ns/1ns
 module tb_booth_ctrl();
 	reg[31:0]	A,B;
 	reg[31:0]	A_r,B_r;
 	reg[31:0]	A_r1,B_r1;
 	reg[31:0]	A_r2,B_r2;
-	wire[63:0]res;
+	reg valid_i,ready_i;
 	reg		sys_clk,sys_rst_n;
+
+	wire[63:0]res;
+	wire	ready_o,valid_o;
+	
 	parameter	MAX_NUM = 32'hffff_ffff;
 	parameter	TEST_NUM = 10000;
 	initial
 	begin
 		sys_clk	<=1'b0;
 		sys_rst_n<=1'b0;
+		valid_i	<= 1'b1;
+		ready_i <= 1'b1;
 		A <= $random() % MAX_NUM;
 		B <= $random() % MAX_NUM;
 		#20
@@ -67,6 +74,10 @@ booth_multiplier u_booth_multiplier(
 	.rst_n		(sys_rst_n),
 	.data1		(B),
 	.data2		(A),
+	.valid_i(valid_i),
+	.ready_o(ready_o),
+	.ready_i(ready_i),
+	.valid_o(valid_o),
 	.res(res)
 );
 
