@@ -1,10 +1,10 @@
 module pp_generator(
 	input 			   clk	,
 	input			   rst_n,
-	input [31:0]	   data_i,
-	input [15:0]       set0	,	
-	input [15:0]       inv	,	
-	input [15:0]       X2	,
+	input [32:0]	   data_i,
+	input [16:0]       set0	,	
+	input [16:0]       inv	,	
+	input [16:0]       X2	,
 	input			valid_i,
 	output			ready_o,
 	//下一级
@@ -26,7 +26,8 @@ module pp_generator(
 	output reg[63:0]       pp12	,
 	output reg[63:0]       pp13	,
 	output reg[63:0]       pp14	,
-	output reg[63:0]       pp15	
+	output reg[63:0]       pp15	,
+	output reg[63:0]	   pp16
 );
 
 	assign		ready_o = ready_i;
@@ -41,24 +42,24 @@ module pp_generator(
 		end
 	end
 
-	wire[63:0]  pp_temp[15:0];
-	wire[32:0]  data;
-	assign	data = {data_i[31],data_i};
+	wire[63:0]  pp_temp[16:0];
+	wire[33:0]  data;
+	assign	data = {data_i[32],data_i};
 	genvar	i;
 	generate
-		for(i=0;i<16;i=i+1)
+		for(i=0;i<=16;i=i+1)
 		begin:pp_gen
-			assign pp_temp[i] = {64{((~set0[i])&(~inv[i])&(~X2[i]))}}&({{31{data[32]}},data})
-							|   {64{((inv[i])&(~X2[i]))}}&((~({{31{data[32]}},data}))+64'b1)
-							|   {64{((~inv[i])&(X2[i]))}}&({{31{data[32]}},data<<1})
-							|	{64{((inv[i])&(X2[i]))}}&((~({{31{data[32]}},data<<1}))+64'b1)
+			assign pp_temp[i] = {64{((~set0[i])&(~inv[i])&(~X2[i]))}}&({{30{data[33]}},data})
+							|   {64{((inv[i])&(~X2[i]))}}&((~({{30{data[33]}},data}))+64'b1)
+							|   {64{((~inv[i])&(X2[i]))}}&({{30{data[33]}},data<<1})
+							|	{64{((inv[i])&(X2[i]))}}&((~({{30{data[33]}},data<<1}))+64'b1)
 							|   {64{(set0[i])}}&(64'b0)
 							;
 		end
 	endgenerate
 	always@(posedge clk or negedge rst_n)begin
 		if(!rst_n)begin
-			{pp0,pp1,pp2,pp3,pp4,pp5,pp6,pp7,pp8,pp9,pp10,pp11,pp12,pp13,pp14,pp15} <= 'b0;
+			{pp0,pp1,pp2,pp3,pp4,pp5,pp6,pp7,pp8,pp9,pp10,pp11,pp12,pp13,pp14,pp15,pp16} <= 'b0;
 		end
 		else if(ready_o&valid_i)begin
 			pp0	 <= pp_temp[0];
@@ -76,7 +77,8 @@ module pp_generator(
 			pp12 <= {pp_temp[12]<<24};	
 			pp13 <= {pp_temp[13]<<26};	
 			pp14 <= {pp_temp[14]<<28};	
-			pp15 <= {pp_temp[15]<<30};			
+			pp15 <= {pp_temp[15]<<30};
+			pp16 <= {pp_temp[16]<<32};			
 		end
 	end
 	assign		valid_o	= valid_r;

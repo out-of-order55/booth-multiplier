@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_2" LaunchPart="xc7a200tffg1156-3" LaunchTime="1711434992">
+  <File Type="BITSTR-BMM" Name="booth_multiplier_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="booth_multiplier_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="booth_multiplier_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="booth_multiplier_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="booth_multiplier.tcl"/>
+  <File Type="OPT-TIMING" Name="booth_multiplier_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="booth_multiplier_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="booth_multiplier_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="booth_multiplier_reports.tcl"/>
+  <File Type="OPT-DRC" Name="booth_multiplier_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="booth_multiplier.hwdef"/>
+  <File Type="PWROPT-DCP" Name="booth_multiplier_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="booth_multiplier_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="booth_multiplier_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="booth_multiplier_placed.dcp"/>
+  <File Type="PLACE-IO" Name="booth_multiplier_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="booth_multiplier_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="booth_multiplier_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="booth_multiplier_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="booth_multiplier_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="booth_multiplier_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="booth_multiplier_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="booth_multiplier_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="booth_multiplier_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="booth_multiplier.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="booth_multiplier_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="booth_multiplier_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="booth_multiplier_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="booth_multiplier.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="booth_multiplier_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="booth_multiplier_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="booth_multiplier_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="booth_multiplier_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="booth_multiplier_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="booth_multiplier_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="booth_multiplier_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="booth_multiplier.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="booth_multiplier_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="booth_multiplier_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="booth_multiplier_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="booth_multiplier_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="booth_multiplier_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="booth_multiplier_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="booth_multiplier_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="booth_multiplier_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="booth_multiplier_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="booth_multiplier_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="booth_multiplier_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="booth_multiplier_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="booth_multiplier_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="booth_multiplier_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="booth_multiplier_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="booth_multiplier_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="booth_multiplier_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="booth_multiplier_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="booth_multiplier_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="booth_multiplier_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="booth_multiplier_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="booth_multiplier.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="booth_multiplier_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="booth_multiplier.rbt"/>
+  <File Type="BITSTR-NKY" Name="booth_multiplier.nky"/>
+  <File Type="PDI-FILE" Name="booth_multiplier.pdi"/>
+  <File Type="RCFI_FILE" Name="booth_multiplier.rcfi"/>
+  <File Type="CFI_FILE" Name="booth_multiplier.cfi"/>
+  <File Type="RNPI_FILE" Name="booth_multiplier.rnpi"/>
+  <File Type="NPI_FILE" Name="booth_multiplier.npi"/>
+  <File Type="RBD_FILE" Name="booth_multiplier.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="booth_multiplier.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="booth_multiplier.sysdef"/>
+  <File Type="BG-BGN" Name="booth_multiplier.bgn"/>
+  <File Type="BG-DRC" Name="booth_multiplier.drc"/>
+  <File Type="RDI-RDI" Name="booth_multiplier.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../src/CLA.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/CLA_64bits.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/booth_ctrl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/compressor4_2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/pp_compressor4_2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/pp_generator.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/booth_multiplier.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../ip_repo/my_1.0/hdl/my_v1_0_M00_AXI.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/my_v1_0_bfm_1/my_v1_0_bfm_1.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="booth_multiplier"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

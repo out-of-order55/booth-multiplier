@@ -39,6 +39,7 @@ booth_multiplier u_booth_multiplier(
 	.rst_n		(sys_rst_n),
 	.data1		(B),
 	.data2		(A),
+	.signal	    (1'b1),
 	.valid_i(valid_i),
 	.ready_o(ready_o),
 	.ready_i(ready_i),

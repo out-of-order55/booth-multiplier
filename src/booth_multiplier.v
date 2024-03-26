@@ -1,19 +1,19 @@
 module booth_multiplier(
 	input			clk,
 	input			rst_n,
-	input [31:0]	data1,
-	input [31:0]	data2,
+	input [32:0]	data1,
+	input [32:0]	data2,
 	//与上一模块交互的handshake
 	input			valid_i,
 	output			ready_o,
 	//与下一模块交互的handshake
 	input			ready_i,
 	output			valid_o,
-	output reg[63:0] 	res
+	output [63:0] 	res
 );
-	wire[15:0]        set0;//0
-	wire[15:0]        inv;//负数
-	wire[15:0]    	  X2;//乘2
+	wire[16:0]        set0;//0
+	wire[16:0]        inv;//负数
+	wire[16:0]    	  X2;//乘2
 	wire[63:0]	pp0	;		
 	wire[63:0]	pp1	;		
 	wire[63:0]	pp2	;		
@@ -29,8 +29,9 @@ module booth_multiplier(
 	wire[63:0]	pp12;		
 	wire[63:0]	pp13;		
 	wire[63:0]	pp14;		
-	wire[63:0]	pp15;		
-	booth_ctrl u_booth_ctrl(
+	wire[63:0]	pp15;	
+	wire[63:0]	pp16;	
+booth_ctrl u_booth_ctrl(
 	.A		(data2),
 	.set0	(set0),
 	.inv	(inv),
@@ -43,8 +44,8 @@ pp_generator u_pp_generator(
 	.data_i	(data1),
 	.valid_i(valid_i),
 	.ready_o(ready_o),
-	.ready_i(ready_r1),
-	.valid_o(valid_r1),
+	.ready_i(ready_i),
+	.valid_o(valid_o),
 	.set0	(set0),	
 	.inv	(inv),	
 	.X2		(X2),
@@ -63,12 +64,11 @@ pp_generator u_pp_generator(
 	.pp12	(pp12),
 	.pp13	(pp13),
 	.pp14	(pp14),
-	.pp15	(pp15)
+	.pp15	(pp15),
+	.pp16	(pp16)
 );
 	wire[63:0]	c0_stage1,c1_stage1,c2_stage1,c3_stage1;
 	wire[63:0]	s0_stage1,s1_stage1,s2_stage1,s3_stage1;
-	reg[63:0]	c0_stage1_r,c1_stage1_r,c2_stage1_r,c3_stage1_r;
-	reg[63:0]	s0_stage1_r,s1_stage1_r,s2_stage1_r,s3_stage1_r;
 
 //stage1
 pp_compressor4_2 pp_compressor4_2_s10(
@@ -103,97 +103,38 @@ pp_compressor4_2 pp_compressor4_2_s13(
 	.C	(c3_stage1),
 	.S	(s3_stage1)
 );
-	reg	valid_r2;
-	wire ready_r2;
-	assign	ready_r1 = (~valid_r2)|ready_r2;
-	
-	always @(posedge clk or negedge rst_n) begin
-		if(!rst_n)begin
-			valid_r2<=1'b0;
-		end
-		else if(ready_r1)begin
-			valid_r2<=valid_r1;
-		end
-	end
-	always@(posedge clk or negedge rst_n)begin
-		if(!rst_n)begin
-			c0_stage1_r <= 'b0;
-			c1_stage1_r <= 'b0;
-			c2_stage1_r <= 'b0;
-			c3_stage1_r <= 'b0;
-			s0_stage1_r <= 'b0;
-			s1_stage1_r <= 'b0;
-			s2_stage1_r <= 'b0;
-			s3_stage1_r <= 'b0;	
-		end
-		else if(ready_r1&valid_r1)begin
-			c0_stage1_r <= c0_stage1;
-			c1_stage1_r <= c1_stage1;
-			c2_stage1_r <= c2_stage1;
-			c3_stage1_r <= c3_stage1;
-			s0_stage1_r <= s0_stage1;
-			s1_stage1_r <= s1_stage1;
-			s2_stage1_r <= s2_stage1;
-			s3_stage1_r <= s3_stage1;	
-		end
-	end
+
+
 	wire[63:0]	c0_stage2,c1_stage2;
 	wire[63:0]	s0_stage2,s1_stage2;
-	reg [63:0]	c0_stage2_r,c1_stage2_r;
-	reg [63:0]	s0_stage2_r,s1_stage2_r;
 
 //stage 2
 pp_compressor4_2 pp_compressor4_2_s20(
-	.i1	(c0_stage1_r),
-	.i2	(s0_stage1_r),
-	.i3	(c1_stage1_r),
-	.i4	(s1_stage1_r),
+	.i1	(c0_stage1),
+	.i2	(s0_stage1),
+	.i3	(c1_stage1),
+	.i4	(s1_stage1),
 	.C	(c0_stage2),
 	.S	(s0_stage2)
 );
 pp_compressor4_2 pp_compressor4_2_s21(
-	.i1	(c2_stage1_r),
-	.i2	(s2_stage1_r),
-	.i3	(c3_stage1_r),
-	.i4	(s3_stage1_r),
+	.i1	(c2_stage1),
+	.i2	(s2_stage1),
+	.i3	(c3_stage1),
+	.i4	(s3_stage1),
 	.C	(c1_stage2),
 	.S	(s1_stage2)
 );
-	reg	valid_r3;
-	assign	ready_r2 = (~valid_r3)|ready_r3;
-	
-	always @(posedge clk or negedge rst_n) begin
-		if(!rst_n)begin
-			valid_r3<=1'b0;
-		end
-		else if(ready_r2)begin
-			valid_r3<=valid_r2;
-		end
-	end
-	always@(posedge clk or negedge rst_n)begin
-		if(!rst_n)begin
-			c0_stage2_r <= 'b0;
-			c1_stage2_r <= 'b0;
-			s0_stage2_r <= 'b0;
-			s1_stage2_r	<= 'b0;		
-		end
-		else if(ready_r2&valid_r2)begin
-			c0_stage2_r <= c0_stage2;
-			c1_stage2_r <= c1_stage2;
-			s0_stage2_r <= s0_stage2;
-			s1_stage2_r	<= s1_stage2;
-		end
 
-	end
 	wire[63:0]	c0_stage3;
 	wire[63:0]	s0_stage3;
 	wire[63:0]	CLA_res;
 //stage3
 pp_compressor4_2 pp_compressor4_2_s3(
-	.i1	(c0_stage2_r),
-	.i2	(s0_stage2_r),
-	.i3	(c1_stage2_r),
-	.i4	(s1_stage2_r),
+	.i1	(c0_stage2),
+	.i2	(s0_stage2),
+	.i3	(c1_stage2),
+	.i4	(s1_stage2),
 	.C	(c0_stage3),
 	.S	(s0_stage3)
 );
@@ -203,27 +144,5 @@ CLA_64bits CLA_64bits_s4(
 	.cin(1'b0),
 	.res(CLA_res)
 );
-	reg	valid_r4;
-	assign	ready_r3 = (~valid_r4)|ready_i;
-	
-	always @(posedge clk or negedge rst_n) begin
-		if(!rst_n)begin
-			valid_r4<=1'b0;
-		end
-		else if(ready_r3)begin
-			valid_r4<=valid_r3;
-		end
-	end
-	always @(posedge clk or negedge rst_n) begin
-		if(!rst_n)begin
-			res <= 'b0;
-		end
-		else if(ready_r3&valid_r3)begin
-			res <= CLA_res;
-		end
-	end
-assign	valid_o = valid_r4;
-// always@(posedge clk)
-	// res <=pp0+pp1+pp2+pp3+pp4+pp5+pp6+pp7+pp8+pp9+pp10+pp11+pp12+pp13+pp14+pp15;
-//assign	res =pp0+pp1+pp2+pp3+pp4+pp5+pp6+pp7+pp8+pp9+pp10+pp11+pp12+pp13+pp14+pp15;
+	assign res = CLA_res+pp16;
 endmodule

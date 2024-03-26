@@ -1,0 +1,139 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xE1234BAD88CFB979",
+      "device": "xc7a200tffg1156-3",
+      "name": "my_v1_0_bfm_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "my_0": "",
+      "slave_0": ""
+    },
+    "ports": {
+      "ACLK": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "ARESETN"
+          },
+          "CLK_DOMAIN": {
+            "value": "my_v1_0_bfm_1_ACLK"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000"
+          }
+        }
+      },
+      "ARESETN": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW"
+          }
+        }
+      },
+      "M00_AXI_INIT_AXI_TXN": {
+        "direction": "I"
+      },
+      "M00_AXI_ERROR": {
+        "direction": "O"
+      },
+      "M00_AXI_TXN_DONE": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "my_0": {
+        "vlnv": "xilinx.com:user:my:1.0",
+        "xci_name": "my_v1_0_bfm_1_my_0_0"
+      },
+      "slave_0": {
+        "vlnv": "xilinx.com:ip:axi_vip:1.1",
+        "xci_name": "my_v1_0_bfm_1_slave_0_0",
+        "parameters": {
+          "INTERFACE_MODE": {
+            "value": "SLAVE"
+          },
+          "PROTOCOL": {
+            "value": "AXI4LITE"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "my_0_M00_AXI": {
+        "interface_ports": [
+          "slave_0/S_AXI",
+          "my_0/M00_AXI"
+        ]
+      }
+    },
+    "nets": {
+      "aclk_net": {
+        "ports": [
+          "ACLK",
+          "slave_0/aclk",
+          "my_0/m00_axi_aclk"
+        ]
+      },
+      "aresetn_net": {
+        "ports": [
+          "ARESETN",
+          "slave_0/aresetn",
+          "my_0/m00_axi_aresetn"
+        ]
+      },
+      "init_axi_txn_00": {
+        "ports": [
+          "M00_AXI_INIT_AXI_TXN",
+          "my_0/m00_axi_init_axi_txn"
+        ]
+      },
+      "error_00": {
+        "ports": [
+          "my_0/m00_axi_error",
+          "M00_AXI_ERROR"
+        ]
+      },
+      "txn_done_00": {
+        "ports": [
+          "my_0/m00_axi_txn_done",
+          "M00_AXI_TXN_DONE"
+        ]
+      }
+    },
+    "addressing": {
+      "/my_0": {
+        "address_spaces": {
+          "M00_AXI": {
+            "range": "4G",
+            "width": "32",
+            "segments": {
+              "SEG_slave_0_Reg": {
+                "address_block": "/slave_0/S_AXI/Reg",
+                "offset": "0x44A00000",
+                "range": "64K"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

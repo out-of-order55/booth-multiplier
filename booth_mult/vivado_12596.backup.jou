@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Feb  3 14:57:49 2024
+# Process ID: 12596
+# Current directory: E:/RISCV/booth/booth_mult
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13252 E:\RISCV\booth\booth_mult\booth_mult.xpr
+# Log file: E:/RISCV/booth/booth_mult/vivado.log
+# Journal file: E:/RISCV/booth/booth_mult\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/RISCV/booth/booth_mult/booth_mult.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source my_v1_0_tb.tcl
+current_wave_config {Untitled 1}
+add_wave {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/aclk}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/aresetn}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_awaddr}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_awprot}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_awvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_awready}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_wdata}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_wstrb}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_wvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_wready}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_bresp}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_bvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_bready}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_araddr}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_arprot}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_arvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_arready}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_rdata}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_rresp}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_rvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/s_axi_rready}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/slave_0/S_AXI}} 
+close_sim

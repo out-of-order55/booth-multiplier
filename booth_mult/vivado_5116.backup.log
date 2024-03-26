@@ -1,0 +1,291 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat Feb  3 11:26:31 2024
+# Process ID: 5116
+# Current directory: E:/RISCV/booth/booth_mult
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19704 E:\RISCV\booth\booth_mult\booth_mult.xpr
+# Log file: E:/RISCV/booth/booth_mult/vivado.log
+# Journal file: E:/RISCV/booth/booth_mult\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project E:/RISCV/booth/booth_mult/booth_mult.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/RISCV/booth/ip_repo/my_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/RISCV/booth/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 899.715 ; gain = 226.809
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/ip/axi_bram_ctrl_0/axi_bram_ctrl_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset axi_bram_ctrl_0 E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/ip/axi_bram_ctrl_0/axi_bram_ctrl_0.xci
+INFO: [Project 1-386] Moving file 'E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/ip/axi_bram_ctrl_0/axi_bram_ctrl_0.xci' from fileset 'axi_bram_ctrl_0' to fileset 'sources_1'.
+add_files -norecurse {E:/RISCV/booth/ip_repo/my_1.0/hdl/my_v1_0.v E:/RISCV/booth/ip_repo/my_1.0/hdl/my_v1_0_M00_AXI.v}
+update_compile_order -fileset sources_1
+set_property top my_v1_0 [current_fileset]
+update_compile_order -fileset sources_1
+source E:/RISCV/booth/ip_repo/my_1.0/example_designs/bfm_design/design.tcl
+# proc create_ipi_design { offsetfile design_name } {
+# 	create_bd_design $design_name
+# 	open_bd_design $design_name
+# 
+# 	# Create Clock and Reset Ports
+# 	set ACLK [ create_bd_port -dir I -type clk ACLK ]
+# 	set_property -dict [ list CONFIG.FREQ_HZ {100000000} CONFIG.PHASE {0.000} CONFIG.CLK_DOMAIN "${design_name}_ACLK" ] $ACLK
+# 	set ARESETN [ create_bd_port -dir I -type rst ARESETN ]
+# 	set_property -dict [ list CONFIG.POLARITY {ACTIVE_LOW}  ] $ARESETN
+# 	set_property CONFIG.ASSOCIATED_RESET ARESETN $ACLK
+# 
+# 	# Create instance: my_0, and set properties
+# 	set my_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:my:1.0 my_0]
+# 
+# 	# Create External ports
+# 	set M00_AXI_INIT_AXI_TXN [ create_bd_port -dir I M00_AXI_INIT_AXI_TXN ]
+# 	set M00_AXI_ERROR [ create_bd_port -dir O M00_AXI_ERROR ]
+# 	set M00_AXI_TXN_DONE [ create_bd_port -dir O M00_AXI_TXN_DONE ]
+# 
+# 	# Create instance: slave_0, and set properties
+# 	set slave_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vip slave_0]
+# 	set_property -dict [ list  CONFIG.PROTOCOL {AXI4LITE}  CONFIG.INTERFACE_MODE {SLAVE} ] $slave_0
+# 
+# connect_bd_intf_net [get_bd_intf_pins slave_0/S_AXI ] [get_bd_intf_pins my_0/M00_AXI]
+# 	# Create port connections
+# 	connect_bd_net -net aclk_net [get_bd_ports ACLK] [get_bd_pins slave_0/ACLK] [get_bd_pins my_0/M00_AXI_ACLK]
+# 	connect_bd_net -net aresetn_net [get_bd_ports ARESETN] [get_bd_pins slave_0/ARESETN] [get_bd_pins my_0/M00_AXI_ARESETN]
+# 	connect_bd_net -net init_axi_txn_00 [get_bd_ports M00_AXI_INIT_AXI_TXN] [get_bd_pins my_0/M00_AXI_INIT_AXI_TXN]
+# 	connect_bd_net -net error_00 [get_bd_ports M00_AXI_ERROR] [get_bd_pins my_0/M00_AXI_ERROR]
+# 	connect_bd_net -net txn_done_00 [get_bd_ports M00_AXI_TXN_DONE] [get_bd_pins my_0/M00_AXI_TXN_DONE]
+# set_property target_simulator XSim [current_project]
+# set_property -name {xsim.simulate.runtime} -value {100ms} -objects [get_filesets sim_1]
+# 
+# 	# Auto assign address
+# 	assign_bd_address
+# 
+# 	# Copy all address to interface_address.vh file
+# 	set bd_path [file dirname [get_property NAME [get_files ${design_name}.bd]]]
+# 	upvar 1 $offsetfile offset_file
+# 	set offset_file "${bd_path}/my_v1_0_tb_include.svh"
+# 	set fp [open $offset_file "w"]
+# 	puts $fp "`ifndef my_v1_0_tb_include_vh_"
+# 	puts $fp "`define my_v1_0_tb_include_vh_\n"
+# 	puts $fp "//Configuration current bd names"
+# 	puts $fp "`define BD_NAME ${design_name}"
+# 	puts $fp "`define BD_INST_NAME ${design_name}_i"
+# 	puts $fp "`define BD_WRAPPER ${design_name}_wrapper\n"
+# 	puts $fp "//Configuration address parameters"
+# 
+# 	puts $fp "`endif"
+# 	close $fp
+# }
+# set ip_path [file dirname [file normalize [get_property XML_FILE_NAME [ipx::get_cores xilinx.com:user:my:1.0]]]]
+# set test_bench_file ${ip_path}/example_designs/bfm_design/my_v1_0_tb.sv
+# set interface_address_vh_file ""
+# set repo_paths [get_property ip_repo_paths [current_fileset]] 
+# if { [lsearch -exact -nocase $repo_paths $ip_path ] == -1 } {
+# 	set_property ip_repo_paths "$ip_path [get_property ip_repo_paths [current_fileset]]" [current_fileset]
+# 	update_ip_catalog
+# }
+# set design_name ""
+# set all_bd {}
+# set all_bd_files [get_files *.bd -quiet]
+# foreach file $all_bd_files {
+# set file_name [string range $file [expr {[string last "/" $file] + 1}] end]
+# set bd_name [string range $file_name 0 [expr {[string last "." $file_name] -1}]]
+# lappend all_bd $bd_name
+# }
+# for { set i 1 } { 1 } { incr i } {
+# 	set design_name "my_v1_0_bfm_${i}"
+# 	if { [lsearch -exact -nocase $all_bd $design_name ] == -1 } {
+# 		break
+# 	}
+# }
+# create_ipi_design interface_address_vh_file ${design_name}
+Wrote  : <E:\RISCV\booth\booth_mult\booth_mult.srcs\sources_1\bd\my_v1_0_bfm_1\my_v1_0_bfm_1.bd> 
+WARNING: [BD 5-670] It is required to provide a frequency value for a user created input clock port. Please use the <-freq_hz $freq_val> argument of the create_bd_port command. ie create_bd_port -dir I -type clk -freq_hz 100000000 clkin
+Slave segment </slave_0/S_AXI/Reg> is being mapped into address space </my_0/M00_AXI> at <0x44A0_0000 [ 64K ]>
+# validate_bd_design
+INFO: [BD 41-1662] The design 'my_v1_0_bfm_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <E:\RISCV\booth\booth_mult\booth_mult.srcs\sources_1\bd\my_v1_0_bfm_1\my_v1_0_bfm_1.bd> 
+Wrote  : <E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/bd/my_v1_0_bfm_1/ui/bd_19bd7e7b.ui> 
+VHDL Output written to : E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/bd/my_v1_0_bfm_1/synth/my_v1_0_bfm_1.v
+VHDL Output written to : E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/bd/my_v1_0_bfm_1/sim/my_v1_0_bfm_1.v
+VHDL Output written to : E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/bd/my_v1_0_bfm_1/hdl/my_v1_0_bfm_1_wrapper.v
+# set wrapper_file [make_wrapper -files [get_files ${design_name}.bd] -top -force]
+# import_files -force -norecurse $wrapper_file
+# set_property SOURCE_SET sources_1 [get_filesets sim_1]
+# import_files -fileset sim_1 -norecurse -force $test_bench_file
+# remove_files -quiet -fileset sim_1 my_v1_0_tb_include.vh
+# import_files -fileset sim_1 -norecurse -force $interface_address_vh_file
+# set_property top my_v1_0_tb [get_filesets sim_1]
+# set_property top_lib {} [get_filesets sim_1]
+# set_property top_file {} [get_filesets sim_1]
+# launch_simulation -simset sim_1 -mode behavioral
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [BD 41-1662] The design 'my_v1_0_bfm_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/bd/my_v1_0_bfm_1/synth/my_v1_0_bfm_1.v
+VHDL Output written to : E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/bd/my_v1_0_bfm_1/sim/my_v1_0_bfm_1.v
+VHDL Output written to : E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/bd/my_v1_0_bfm_1/hdl/my_v1_0_bfm_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block my_0 .
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.ID_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.AWUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.WUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.BUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.ARUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5378] Port width mismatch for bus parameter 'S_AXI.RUSER_WIDTH'. Logical port width '0' and physical port width '1' do not match.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block slave_0 .
+Exporting to file E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/bd/my_v1_0_bfm_1/hw_handoff/my_v1_0_bfm_1.hwh
+Generated Block Design Tcl file E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/bd/my_v1_0_bfm_1/hw_handoff/my_v1_0_bfm_1_bd.tcl
+Generated Hardware Definition File E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/bd/my_v1_0_bfm_1/synth/my_v1_0_bfm_1.hwdef
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/RISCV/booth/booth_mult/booth_mult.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2019.2/data/xsim/xsim.ini' copied to run dir:'E:/RISCV/booth/booth_mult/booth_mult.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'my_v1_0_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/RISCV/booth/booth_mult/booth_mult.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L axi_vip_v1_1_6 -L xilinx_vip -prj my_v1_0_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/booth_mult/booth_mult.ip_user_files/bd/my_v1_0_bfm_1/ipshared/a6e3/hdl/my_v1_0_M00_AXI.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_v1_0_M00_AXI
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/booth_mult/booth_mult.ip_user_files/bd/my_v1_0_bfm_1/ipshared/a6e3/hdl/my_v1_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_v1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/booth_mult/booth_mult.ip_user_files/bd/my_v1_0_bfm_1/ip/my_v1_0_bfm_1_my_0_0/sim/my_v1_0_bfm_1_my_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_v1_0_bfm_1_my_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/RISCV/booth/booth_mult/booth_mult.ip_user_files/bd/my_v1_0_bfm_1/ip/my_v1_0_bfm_1_slave_0_0/sim/my_v1_0_bfm_1_slave_0_0_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/RISCV/booth/booth_mult/booth_mult.ip_user_files/bd/my_v1_0_bfm_1/ip/my_v1_0_bfm_1_slave_0_0/sim/my_v1_0_bfm_1_slave_0_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_v1_0_bfm_1_slave_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/booth_mult/booth_mult.ip_user_files/bd/my_v1_0_bfm_1/sim/my_v1_0_bfm_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_v1_0_bfm_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/booth_mult/booth_mult.srcs/sources_1/imports/hdl/my_v1_0_bfm_1_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_v1_0_bfm_1_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/RISCV/booth/booth_mult/booth_mult.srcs/sim_1/imports/bfm_design/my_v1_0_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module my_v1_0_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/RISCV/booth/booth_mult/booth_mult.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/RISCV/booth/booth_mult/booth_mult.sim/sim_1/behav/xsim'
+"xelab -wto cedf1ba49f8f46af880f3bcb992062f0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_6 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot my_v1_0_tb_behav xil_defaultlib.my_v1_0_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto cedf1ba49f8f46af880f3bcb992062f0 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axi_infrastructure_v1_1_0 -L axi_vip_v1_1_6 -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot my_v1_0_tb_behav xil_defaultlib.my_v1_0_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling package std.std
+Compiling module xil_defaultlib.my_v1_0_M00_AXI_default
+Compiling module xil_defaultlib.my_v1_0
+Compiling module xil_defaultlib.my_v1_0_bfm_1_my_0_0
+Compiling module xilinx_vip.axi_vip_axi4pc(WDATA_WIDTH=32,RD...
+Compiling module xilinx_vip.cb
+Compiling module xilinx_vip.axi_vip_if(C_AXI_PROTOCOL=2,C_AX...
+Compiling module axi_vip_v1_1_6.axi_vip_v1_1_6_top(C_AXI_PROTOCO...
+Compiling module xil_defaultlib.my_v1_0_bfm_1_slave_0_0
+Compiling module xil_defaultlib.my_v1_0_bfm_1
+Compiling module xil_defaultlib.my_v1_0_bfm_1_wrapper
+Compiling module xil_defaultlib.my_v1_0_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot my_v1_0_tb_behav
+
+****** Webtalk v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source E:/RISCV/booth/booth_mult/booth_mult.sim/sim_1/behav/xsim/xsim.dir/my_v1_0_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Feb  3 11:29:20 2024...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:18 . Memory (MB): peak = 1137.820 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '18' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/RISCV/booth/booth_mult/booth_mult.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "my_v1_0_tb_behav -key {Behavioral:sim_1:Functional:my_v1_0_tb} -tclbatch {my_v1_0_tb.tcl} -protoinst "protoinst_files/my_v1_0_bfm_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/my_v1_0_bfm_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /my_v1_0_tb/DUT/my_v1_0_bfm_1_i//my_0/M00_AXI
+INFO: [Wavedata 42-564]   Found protocol instance at /my_v1_0_tb/DUT/my_v1_0_bfm_1_i//slave_0/S_AXI
+Time resolution is 1 ps
+source my_v1_0_tb.tcl
+## current_wave_config
+WARNING: Simulation object /my_v1_0_tb/wr_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/rd_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/mst_monitor_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/master_moniter_transaction_queue was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/mst_scb_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/passthrough_monitor_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/passthrough_master_moniter_transaction_queue was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/passthrough_mst_scb_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/passthrough_slave_moniter_transaction_queue was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/passthrough_slv_scb_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/slv_monitor_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/slave_moniter_transaction_queue was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/slv_scb_transaction was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/write_strb was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /my_v1_0_tb/slv_agent_0 was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+XilinxAXIVIP: Found at Path: my_v1_0_tb.DUT.my_v1_0_bfm_1_i.slave_0.inst
+EXAMPLE TEST M00_AXI:
+M00_AXI: PTGEN_TEST_FINISHED!
+PTGEN_TEST: PASSED!
+Executing Axi4 End Of Simulation checks
+$finish called at time : 846 ns : File "/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" Line 3126
+WARNING: [Simulator 45-29] Cannot open source file /wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/xilinx_vip/hdl/axi_vip_axi4pc.sv: file does not exist.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'my_v1_0_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100ms
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:34 . Memory (MB): peak = 1164.305 ; gain = 26.484
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_awaddr}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_awprot}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_awvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_awready}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_wdata}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_wstrb}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_wvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_wready}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_bresp}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_bvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_bready}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_araddr}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_arprot}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_arvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_arready}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_rdata}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_rresp}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_rvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_rready}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_aclk}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_aresetn}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_init_axi_txn}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_error}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/m00_axi_txn_done}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/M00_AXI}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1 us
+XilinxAXIVIP: Found at Path: my_v1_0_tb.DUT.my_v1_0_bfm_1_i.slave_0.inst
+EXAMPLE TEST M00_AXI:
+M00_AXI: PTGEN_TEST_FINISHED!
+PTGEN_TEST: PASSED!
+Executing Axi4 End Of Simulation checks
+$finish called at time : 846 ns : File "/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" Line 3126
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/INIT_AXI_TXN}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/ERROR}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/TXN_DONE}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_ACLK}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_ARESETN}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_AWADDR}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_AWPROT}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_AWVALID}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_AWREADY}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_WDATA}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_WSTRB}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_WVALID}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_WREADY}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_BRESP}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_BVALID}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_BREADY}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_ARADDR}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_ARPROT}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_ARVALID}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_ARREADY}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_RDATA}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_RRESP}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_RVALID}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/M_AXI_RREADY}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/mst_exec_state}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/axi_awvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/axi_wvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/axi_arvalid}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/axi_rready}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/axi_bready}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/axi_awaddr}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/axi_wdata}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/axi_araddr}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/write_resp_error}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/read_resp_error}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/start_single_write}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/start_single_read}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/write_issued}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/read_issued}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/writes_done}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/reads_done}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/error_reg}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/write_index}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/read_index}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/expected_rdata}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/compare_done}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/read_mismatch}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/last_write}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/last_read}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/init_txn_ff}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/init_txn_ff2}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/init_txn_edge}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/init_txn_pulse}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/C_M_START_DATA_VALUE}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/C_M_TARGET_SLAVE_BASE_ADDR}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/C_M_AXI_ADDR_WIDTH}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/C_M_AXI_DATA_WIDTH}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/C_M_TRANSACTIONS_NUM}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/TRANS_NUM_BITS}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/IDLE}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/INIT_WRITE}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/INIT_READ}} {{/my_v1_0_tb/DUT/my_v1_0_bfm_1_i/my_0/inst/my_v1_0_M00_AXI_inst/INIT_COMPARE}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+XilinxAXIVIP: Found at Path: my_v1_0_tb.DUT.my_v1_0_bfm_1_i.slave_0.inst
+EXAMPLE TEST M00_AXI:
+M00_AXI: PTGEN_TEST_FINISHED!
+PTGEN_TEST: PASSED!
+Executing Axi4 End Of Simulation checks
+$finish called at time : 846 ns : File "/wrk/2019.2/continuous/2019_11_06_2708876/packages/customer/vivado/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" Line 3126
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Feb  3 13:39:36 2024...

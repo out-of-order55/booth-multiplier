@@ -1,8 +1,8 @@
 //测试功能完整性
 `timescale 1ns/1ns
 module tb_booth_ctrl();
-	reg[31:0]	A,B;
-	reg[31:0]	A_r,B_r;
+	reg[32:0]	A,B;
+	reg[32:0]	A_r,B_r;
 	reg[31:0]	A_r1,B_r1;
 	reg[31:0]	A_r2,B_r2;
 	reg[31:0]	A_r3,B_r3;
@@ -12,7 +12,7 @@ module tb_booth_ctrl();
 	wire[63:0]res;
 	wire	ready_o,valid_o;
 	
-	parameter	MAX_NUM = 32'hffff_ffff;
+	parameter	MAX_NUM = 32'hf000_0000;
 	parameter	TEST_NUM = 10000;
 	initial
 	begin
@@ -52,7 +52,8 @@ module tb_booth_ctrl();
 		end
 	end
 	
-	wire	signed[63:0]  res_ref = $signed(A_r3)*$signed(B_r3);
+	wire	signed[63:0]  res_ref = $signed(A_r)*$signed(B_r);
+	wire	[63:0]			res_ref_u = A_r*B_r;
 	reg	[20:0]	num_correct=0;
 	reg	[20:0]	num_error=0;
 	reg	[20:0]	i=0;
@@ -64,6 +65,7 @@ module tb_booth_ctrl();
 		end
 		else begin
 			$write("[%d]:%d * %d = %d ,ref: %d ",i-4,$signed(A_r),$signed(B_r),$signed(res),res_ref);
+			//$write("[%d]:%d * %d = %d ,ref: %d ",i-4,(A_r),(B_r),(res),res_ref_u);
 			if(res_ref==res)begin
 				$display("PASS");
 				num_correct<=num_correct+1'b1;
@@ -77,7 +79,7 @@ module tb_booth_ctrl();
 booth_multiplier u_booth_multiplier(
 	.clk		(sys_clk),
 	.rst_n		(sys_rst_n),
-	.data1		(B),
+	.data1		({B}),
 	.data2		(A),
 	.valid_i(valid_i),
 	.ready_o(ready_o),

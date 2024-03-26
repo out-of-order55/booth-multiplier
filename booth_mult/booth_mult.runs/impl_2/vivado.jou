@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Mar 26 14:36:40 2024
+# Process ID: 9852
+# Current directory: E:/RISCV/booth/booth_mult/booth_mult.runs/impl_2
+# Command line: vivado.exe -log booth_multiplier.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source booth_multiplier.tcl -notrace
+# Log file: E:/RISCV/booth/booth_mult/booth_mult.runs/impl_2/booth_multiplier.vdi
+# Journal file: E:/RISCV/booth/booth_mult/booth_mult.runs/impl_2\vivado.jou
+#-----------------------------------------------------------
+source booth_multiplier.tcl -notrace

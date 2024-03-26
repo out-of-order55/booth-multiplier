@@ -1,0 +1,15 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Tue Mar 26 14:38:10 2024
+| Host         : gb running 64-bit major release  (build 9200)
+| Command      : report_bus_skew -warn_on_violation -file booth_multiplier_bus_skew_routed.rpt -pb booth_multiplier_bus_skew_routed.pb -rpx booth_multiplier_bus_skew_routed.rpx
+| Design       : booth_multiplier
+| Device       : 7a200t-ffg1156
+| Speed File   : -3  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

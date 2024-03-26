@@ -2,29 +2,31 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Jan 23 15:16:22 2024
-# Process ID: 19328
+# Start of session at: Tue Mar 26 14:35:56 2024
+# Process ID: 648
 # Current directory: E:/RISCV/booth/booth_mult/booth_mult.runs/synth_2
 # Command line: vivado.exe -log booth_multiplier.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source booth_multiplier.tcl
 # Log file: E:/RISCV/booth/booth_mult/booth_mult.runs/synth_2/booth_multiplier.vds
 # Journal file: E:/RISCV/booth/booth_mult/booth_mult.runs/synth_2\vivado.jou
 #-----------------------------------------------------------
 source booth_multiplier.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/RISCV/booth/ip_repo/my_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'e:/RISCV/booth/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2019.2/data/ip'.
 Command: synth_design -top booth_multiplier -part xc7a200tffg1156-3
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 316 
+INFO: Helper process launched with PID 8116 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 700.297 ; gain = 237.055
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 709.238 ; gain = 241.027
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'booth_multiplier' [E:/RISCV/booth/src/booth_multiplier.v:1]
 INFO: [Synth 8-6157] synthesizing module 'booth_ctrl' [E:/RISCV/booth/src/booth_ctrl.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'booth_ctrl' (1#1) [E:/RISCV/booth/src/booth_ctrl.v:1]
 INFO: [Synth 8-6157] synthesizing module 'pp_generator' [E:/RISCV/booth/src/pp_generator.v:1]
-WARNING: [Synth 8-6014] Unused sequential element valid_r_reg was removed.  [E:/RISCV/booth/src/pp_generator.v:36]
-WARNING: [Synth 8-3848] Net valid_o in module/entity pp_generator does not have driver. [E:/RISCV/booth/src/pp_generator.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'pp_generator' (2#1) [E:/RISCV/booth/src/pp_generator.v:1]
 INFO: [Synth 8-6157] synthesizing module 'pp_compressor4_2' [E:/RISCV/booth/src/pp_compressor4_2.v:1]
 INFO: [Synth 8-6157] synthesizing module 'compressor4_2' [E:/RISCV/booth/src/compressor4_2.v:1]
@@ -35,24 +37,88 @@ INFO: [Synth 8-6157] synthesizing module 'CLA_64bits' [E:/RISCV/booth/src/CLA_64
 INFO: [Synth 8-6157] synthesizing module 'CLA' [E:/RISCV/booth/src/CLA.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'CLA' (5#1) [E:/RISCV/booth/src/CLA.v:1]
 INFO: [Synth 8-6155] done synthesizing module 'CLA_64bits' (6#1) [E:/RISCV/booth/src/CLA_64bits.v:1]
+WARNING: [Synth 8-3848] Net res in module/entity booth_multiplier does not have driver. [E:/RISCV/booth/src/booth_multiplier.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'booth_multiplier' (7#1) [E:/RISCV/booth/src/booth_multiplier.v:1]
-WARNING: [Synth 8-3331] design pp_generator has unconnected port valid_o
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[63]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[62]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[61]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[60]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[59]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[58]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[57]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[56]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[55]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[54]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[53]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[52]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[51]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[50]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[49]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[48]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[47]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[46]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[45]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[44]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[43]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[42]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[41]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[40]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[39]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[38]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[37]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[36]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[35]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[34]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[33]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[32]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[31]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[30]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[29]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[28]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[27]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[26]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[25]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[24]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[23]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[22]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[21]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[20]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[19]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[18]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[17]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[16]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[15]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[14]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[13]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[12]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[11]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[10]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[9]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[8]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[7]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[6]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[5]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[4]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[3]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[2]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[1]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 773.414 ; gain = 310.172
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 782.887 ; gain = 314.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 773.414 ; gain = 310.172
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 782.887 ; gain = 314.676
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a200tffg1156-3
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 773.414 ; gain = 310.172
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 782.887 ; gain = 314.676
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a200tffg1156-3
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 786.180 ; gain = 322.938
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 792.352 ; gain = 324.141
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -70,9 +136,10 @@ Detailed RTL Component Info :
 	   4 Input      1 Bit         XORs := 448   
 	   2 Input      1 Bit         XORs := 448   
 +---Registers : 
-	               64 Bit    Registers := 28    
-	                1 Bit    Registers := 2     
+	               64 Bit    Registers := 16    
+	                1 Bit    Registers := 1     
 +---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 15    
 	   2 Input      1 Bit        Muxes := 14    
 ---------------------------------------------------------------------------------
@@ -82,15 +149,13 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module booth_multiplier 
-Detailed RTL Component Info : 
-+---Registers : 
-	               64 Bit    Registers := 12    
-	                1 Bit    Registers := 2     
 Module pp_generator 
 Detailed RTL Component Info : 
 +---Registers : 
 	               64 Bit    Registers := 16    
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     33 Bit        Muxes := 1     
 Module compressor4_2 
 Detailed RTL Component Info : 
 +---XORs : 
@@ -122,211 +187,45 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3331] design pp_generator has unconnected port valid_o
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp15_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp14_reg[27] )
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp14_reg[61]' (FDCE) to 'u_pp_generator/pp14_reg[62]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp14_reg[62]' (FDCE) to 'u_pp_generator/pp14_reg[63]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp13_reg[25] )
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp13_reg[59]' (FDCE) to 'u_pp_generator/pp13_reg[60]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp13_reg[60]' (FDCE) to 'u_pp_generator/pp13_reg[61]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp13_reg[61]' (FDCE) to 'u_pp_generator/pp13_reg[62]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp13_reg[62]' (FDCE) to 'u_pp_generator/pp13_reg[63]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_pp_generator/\pp12_reg[15] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp12_reg[57]' (FDCE) to 'u_pp_generator/pp12_reg[58]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp12_reg[58]' (FDCE) to 'u_pp_generator/pp12_reg[59]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp12_reg[59]' (FDCE) to 'u_pp_generator/pp12_reg[60]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp12_reg[60]' (FDCE) to 'u_pp_generator/pp12_reg[61]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp12_reg[61]' (FDCE) to 'u_pp_generator/pp12_reg[62]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp12_reg[62]' (FDCE) to 'u_pp_generator/pp12_reg[63]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp11_reg[55]' (FDCE) to 'u_pp_generator/pp11_reg[56]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp11_reg[56]' (FDCE) to 'u_pp_generator/pp11_reg[57]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp11_reg[57]' (FDCE) to 'u_pp_generator/pp11_reg[58]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp11_reg[58]' (FDCE) to 'u_pp_generator/pp11_reg[59]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp11_reg[59]' (FDCE) to 'u_pp_generator/pp11_reg[60]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp11_reg[60]' (FDCE) to 'u_pp_generator/pp11_reg[61]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp11_reg[61]' (FDCE) to 'u_pp_generator/pp11_reg[62]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp11_reg[62]' (FDCE) to 'u_pp_generator/pp11_reg[63]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp10_reg[53]' (FDCE) to 'u_pp_generator/pp10_reg[54]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp10_reg[54]' (FDCE) to 'u_pp_generator/pp10_reg[55]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp10_reg[55]' (FDCE) to 'u_pp_generator/pp10_reg[56]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp10_reg[56]' (FDCE) to 'u_pp_generator/pp10_reg[57]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp10_reg[57]' (FDCE) to 'u_pp_generator/pp10_reg[58]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp10_reg[58]' (FDCE) to 'u_pp_generator/pp10_reg[59]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp10_reg[59]' (FDCE) to 'u_pp_generator/pp10_reg[60]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp10_reg[60]' (FDCE) to 'u_pp_generator/pp10_reg[61]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp10_reg[61]' (FDCE) to 'u_pp_generator/pp10_reg[62]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp10_reg[62]' (FDCE) to 'u_pp_generator/pp10_reg[63]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp9_reg[51]' (FDCE) to 'u_pp_generator/pp9_reg[52]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp9_reg[52]' (FDCE) to 'u_pp_generator/pp9_reg[53]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp9_reg[53]' (FDCE) to 'u_pp_generator/pp9_reg[54]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp9_reg[54]' (FDCE) to 'u_pp_generator/pp9_reg[55]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp9_reg[55]' (FDCE) to 'u_pp_generator/pp9_reg[56]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp9_reg[56]' (FDCE) to 'u_pp_generator/pp9_reg[57]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp9_reg[57]' (FDCE) to 'u_pp_generator/pp9_reg[58]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp9_reg[58]' (FDCE) to 'u_pp_generator/pp9_reg[59]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp9_reg[59]' (FDCE) to 'u_pp_generator/pp9_reg[60]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp9_reg[60]' (FDCE) to 'u_pp_generator/pp9_reg[61]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp9_reg[61]' (FDCE) to 'u_pp_generator/pp9_reg[62]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp9_reg[62]' (FDCE) to 'u_pp_generator/pp9_reg[63]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[49]' (FDCE) to 'u_pp_generator/pp8_reg[50]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[50]' (FDCE) to 'u_pp_generator/pp8_reg[51]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[51]' (FDCE) to 'u_pp_generator/pp8_reg[52]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[52]' (FDCE) to 'u_pp_generator/pp8_reg[53]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[53]' (FDCE) to 'u_pp_generator/pp8_reg[54]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[54]' (FDCE) to 'u_pp_generator/pp8_reg[55]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[55]' (FDCE) to 'u_pp_generator/pp8_reg[56]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[56]' (FDCE) to 'u_pp_generator/pp8_reg[57]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[57]' (FDCE) to 'u_pp_generator/pp8_reg[58]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[58]' (FDCE) to 'u_pp_generator/pp8_reg[59]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[59]' (FDCE) to 'u_pp_generator/pp8_reg[60]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[60]' (FDCE) to 'u_pp_generator/pp8_reg[61]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[61]' (FDCE) to 'u_pp_generator/pp8_reg[62]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp8_reg[62]' (FDCE) to 'u_pp_generator/pp8_reg[63]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[47]' (FDCE) to 'u_pp_generator/pp7_reg[48]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[48]' (FDCE) to 'u_pp_generator/pp7_reg[49]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[49]' (FDCE) to 'u_pp_generator/pp7_reg[50]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[50]' (FDCE) to 'u_pp_generator/pp7_reg[51]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[51]' (FDCE) to 'u_pp_generator/pp7_reg[52]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[52]' (FDCE) to 'u_pp_generator/pp7_reg[53]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[53]' (FDCE) to 'u_pp_generator/pp7_reg[54]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[54]' (FDCE) to 'u_pp_generator/pp7_reg[55]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[55]' (FDCE) to 'u_pp_generator/pp7_reg[56]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[56]' (FDCE) to 'u_pp_generator/pp7_reg[57]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[57]' (FDCE) to 'u_pp_generator/pp7_reg[58]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[58]' (FDCE) to 'u_pp_generator/pp7_reg[59]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[59]' (FDCE) to 'u_pp_generator/pp7_reg[60]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[60]' (FDCE) to 'u_pp_generator/pp7_reg[61]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[61]' (FDCE) to 'u_pp_generator/pp7_reg[62]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp7_reg[62]' (FDCE) to 'u_pp_generator/pp7_reg[63]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[45]' (FDCE) to 'u_pp_generator/pp6_reg[46]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[46]' (FDCE) to 'u_pp_generator/pp6_reg[47]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[47]' (FDCE) to 'u_pp_generator/pp6_reg[48]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[48]' (FDCE) to 'u_pp_generator/pp6_reg[49]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[49]' (FDCE) to 'u_pp_generator/pp6_reg[50]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[50]' (FDCE) to 'u_pp_generator/pp6_reg[51]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[51]' (FDCE) to 'u_pp_generator/pp6_reg[52]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[52]' (FDCE) to 'u_pp_generator/pp6_reg[53]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[53]' (FDCE) to 'u_pp_generator/pp6_reg[54]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[54]' (FDCE) to 'u_pp_generator/pp6_reg[55]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[55]' (FDCE) to 'u_pp_generator/pp6_reg[56]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[56]' (FDCE) to 'u_pp_generator/pp6_reg[57]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[57]' (FDCE) to 'u_pp_generator/pp6_reg[58]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[58]' (FDCE) to 'u_pp_generator/pp6_reg[59]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[59]' (FDCE) to 'u_pp_generator/pp6_reg[60]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[60]' (FDCE) to 'u_pp_generator/pp6_reg[61]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[61]' (FDCE) to 'u_pp_generator/pp6_reg[62]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp6_reg[62]' (FDCE) to 'u_pp_generator/pp6_reg[63]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp5_reg[43]' (FDCE) to 'u_pp_generator/pp5_reg[44]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp5_reg[44]' (FDCE) to 'u_pp_generator/pp5_reg[45]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp5_reg[45]' (FDCE) to 'u_pp_generator/pp5_reg[46]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp5_reg[46]' (FDCE) to 'u_pp_generator/pp5_reg[47]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp5_reg[47]' (FDCE) to 'u_pp_generator/pp5_reg[48]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp5_reg[48]' (FDCE) to 'u_pp_generator/pp5_reg[49]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp5_reg[49]' (FDCE) to 'u_pp_generator/pp5_reg[50]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp5_reg[50]' (FDCE) to 'u_pp_generator/pp5_reg[51]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp5_reg[51]' (FDCE) to 'u_pp_generator/pp5_reg[52]'
-INFO: [Synth 8-3886] merging instance 'u_pp_generator/pp5_reg[52]' (FDCE) to 'u_pp_generator/pp5_reg[53]'
-INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[63]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[62]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[61]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[60]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[59]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[58]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[57]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[56]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[55]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[54]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[53]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[52]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[51]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[50]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[49]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[48]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[47]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[46]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[45]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[44]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[43]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[42]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[41]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[40]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[39]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[38]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[37]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[36]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[35]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[34]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[33]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[32]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[31]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[30]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[29]
+WARNING: [Synth 8-3331] design booth_multiplier has unconnected port res[28]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 982.719 ; gain = 519.477
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 990.391 ; gain = 522.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -339,7 +238,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 985.484 ; gain = 522.242
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 990.391 ; gain = 522.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -351,7 +250,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 985.484 ; gain = 522.242
+Finished Technology Mapping : Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 990.391 ; gain = 522.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -375,13 +274,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 985.508 ; gain = 522.266
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 990.391 ; gain = 522.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 985.508 ; gain = 522.266
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 990.391 ; gain = 522.180
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -400,25 +299,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 985.508 ; gain = 522.266
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 990.391 ; gain = 522.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 985.508 ; gain = 522.266
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 990.391 ; gain = 522.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 985.508 ; gain = 522.266
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 990.391 ; gain = 522.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 985.508 ; gain = 522.266
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 990.391 ; gain = 522.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -431,39 +330,45 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |OBUF |    66|
-+------+-----+------+
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |     1|
+|3     |FDCE  |     1|
+|4     |IBUF  |     4|
+|5     |OBUF  |     2|
+|6     |OBUFT |    64|
++------+------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |    66|
-+------+---------+-------+------+
++------+-----------------+-------------+------+
+|      |Instance         |Module       |Cells |
++------+-----------------+-------------+------+
+|1     |top              |             |    73|
+|2     |  u_pp_generator |pp_generator |     2|
++------+-----------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 985.508 ; gain = 522.266
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 990.391 ; gain = 522.180
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 985.508 ; gain = 522.266
-Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 985.508 ; gain = 522.266
+Synthesis finished with 0 errors, 0 critical warnings and 130 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 990.391 ; gain = 522.180
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 990.391 ; gain = 522.180
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 997.637 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 996.395 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1087.848 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1092.102 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-223 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+26 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1087.848 ; gain = 649.434
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1087.848 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1092.102 ; gain = 628.891
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1092.102 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'E:/RISCV/booth/booth_mult/booth_mult.runs/synth_2/booth_multiplier.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file booth_multiplier_utilization_synth.rpt -pb booth_multiplier_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jan 23 15:16:52 2024...
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 26 14:36:22 2024...
